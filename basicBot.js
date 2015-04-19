@@ -1356,7 +1356,7 @@
                                 if(this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                                 if( !basicBot.commands.executable(this.rank, chat) ) return void (0);
                                 else{
-                                
+
                                 }
                         }
                 },
@@ -1909,11 +1909,11 @@
                             case 'es': ch += 'Por favor, hable Inglés.'; break;
                             case 'fr': ch += 'Parlez anglais, s\'il vous plaît.'; break;
                             case 'nl': ch += 'Spreek Engels, alstublieft.'; break;
-                            case 'pl': ch += 'Proszę mówić po angielsku.'; break;
+                            case 'pl': ch += 'Prosze mówic po angielsku.'; break;
                             case 'pt': ch += 'Por favor, fale Inglês.'; break;
                             case 'sk': ch += 'Hovorte po anglicky, prosím.'; break;
                             case 'cs': ch += 'Mluvte prosím anglicky.'; break;
-                            case 'sr': ch += 'Молим Вас, говорите енглески.'; break;                                  
+                            case 'sr': ch += '????? ???, ???????? ????????.'; break;
                         }
                         ch += ' English please.';
                         API.sendChat(ch);
@@ -2000,7 +2000,7 @@
                         if (user === false || !user.inRoom) {
                             return API.sendChat(subChat(basicBot.chat.ghosting, {name1: chat.un, name2: name}));
                         }
-                        else API.sendChat(subChat(basicBot.chat.notghosting, {name1: chat.un, name2: name}));     
+                        else API.sendChat(subChat(basicBot.chat.notghosting, {name1: chat.un, name2: name}));
                     }
                 }
             },
@@ -2018,8 +2018,8 @@
                             function get_id(api_key, fixedtag, func)
                             {
                                 $.getJSON(
-                                    "https://api.giphy.com/v1/gifs/random?", 
-                                    { 
+                                    "https://api.giphy.com/v1/gifs/random?",
+                                    {
                                         "format": "json",
                                         "api_key": api_key,
                                         "rating": rating,
@@ -2048,8 +2048,8 @@
                             function get_random_id(api_key, func)
                             {
                                 $.getJSON(
-                                    "https://api.giphy.com/v1/gifs/random?", 
-                                    { 
+                                    "https://api.giphy.com/v1/gifs/random?",
+                                    {
                                         "format": "json",
                                         "api_key": api_key,
                                         "rating": rating
@@ -2843,7 +2843,7 @@
                         if (basicBot.settings.bouncerPlus) msg += 'ON';
                         else msg += 'OFF';
                         msg += '. ';
-												
+
                         msg += basicBot.chat.blacklist + ': ';
                         if (basicBot.settings.blacklistEnabled) msg += 'ON';
                         else msg += 'OFF';
@@ -2979,7 +2979,7 @@
                     }
                 }
             },
-						
+
             togglemotdCommand: {
                 command: 'togglemotd',
                 rank: 'bouncer',
@@ -3108,7 +3108,6 @@
                              indexMuted = i;
                              wasMuted = true;
                              }
-
                              }
                              if (!wasMuted) return API.sendChat(subChat(basicBot.chat.notmuted, {name: chat.un}));
                              basicBot.room.mutedUsers.splice(indexMuted);
